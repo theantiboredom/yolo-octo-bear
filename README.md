@@ -7,5 +7,6 @@ Kirstie Booras
 Travis Johnson
 Eric Rackear
 Mitch Rogers
+Sean Thomas
 
 No project yet.
