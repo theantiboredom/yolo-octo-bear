@@ -1,0 +1,32 @@
+<section data-ng-controller="ArtistsController">
+    <div class="row" style="margin-top: 200px" data-ng-show="authentication.user">
+        <div class="col-md-6 col-md-6-offset" style="padding-top: 5px">
+            <h1><strong>Manage artists</strong></h1>
+            <form name="artistForm" data-ng-submit="add()" class="signin form-horizontal" autocomplete="off">
+                <fieldset>
+                    <div class="form-group">
+                        <label for="artistName">Artist Name</label>
+                        <input type="text" id="artistName" name="artistName" class="form-control" data-ng-model="details.artistName" placeholder="Artist Name">
+                    </div>
+                    <div class="text-center form-group">
+                        <button type="submit" class="btn btn-large btn-primary">Add Artist</button>
+                    </div>
+                    <div data-ng-show="success" class="text-center text-success">
+                        <strong>Artist Saved Successfully</strong>
+                    </div>
+                    <div data-ng-show="error" class="text-center text-danger">
+                        <strong data-ng-bind="error"></strong>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <div class="col-md-6 col-md-6-offset" style="padding-left: 100px">
+            <h1><small>Artists in your watchlist</small></h1>
+            <table>
+                <tr data-ng-repeat="artist in artists">
+                    <td>{{artist.artistName}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</section>

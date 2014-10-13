@@ -13,19 +13,20 @@ angular.module('users').controller('AuthenticationController', ['$scope', '$http
 				$scope.authentication.user = response;
 
 				// And redirect to the index page
-				$location.path('/');
+				$location.path('/artists');
 			}).error(function(response) {
 				$scope.error = response.message;
 			});
 		};
 
 		$scope.signin = function() {
+            console.log('SIGNIN SCOPE', $scope);
 			$http.post('/auth/signin', $scope.credentials).success(function(response) {
 				// If successful we assign the response to the global user model
 				$scope.authentication.user = response;
 
 				// And redirect to the index page
-				$location.path('/');
+				$location.path('/artists');
 			}).error(function(response) {
 				$scope.error = response.message;
 			});
