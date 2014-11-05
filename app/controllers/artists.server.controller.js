@@ -10,7 +10,7 @@ var _ = require('lodash'),
     passport = require('passport'),
     Artist = mongoose.model('Artist');
 /**
- * Create a Artist
+ * Create an Artist
  */
 exports.create = function(req, res) {
     console.log('Artist create');
@@ -18,6 +18,7 @@ exports.create = function(req, res) {
     //var artist = new Artist(req.body);
     var artist = new Artist(req.body);
     var message = null;
+    console.log('req.body', req.body);
 
     artist.provider = 'local';
 

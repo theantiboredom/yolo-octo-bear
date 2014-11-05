@@ -1,0 +1,25 @@
+<section class="row" data-ng-controller="IntegrationsController">
+	<h3 class="col-md-12 text-center" data-ng-show="hasConnectedAdditionalIntegrationAccounts()">Connected Integration accounts:</h3>
+	<div class="col-md-12 text-center">
+		<div data-ng-repeat="(providerName, providerData) in user.additionalProvidersData" class="remove-account-container">
+			<img ng-src="/modules/users/img/buttons/{{providerName}}.png">
+			<a class="btn btn-danger btn-remove-account" data-ng-click="removeUserSocialAccount(providerName)">
+				<i class="glyphicon glyphicon-trash"></i>
+			</a>
+		</div>
+	</div>
+	<h3 class="col-md-12 text-center">Connect other Integration accounts:</h3>
+	<div class="col-md-12 text-center">
+		<a href="/auth/soundcloud" data-ng-hide="isConnectedIntegrationAccount('soundcloud')" class="undecorated-link">
+			<img src="/modules/users/img/buttons/soundcloud.png">
+		</a>
+		<!--
+		<a href="/auth/lastfm" data-ng-hide="isConnectedIntegrationAccount('lastfm')" class="undecorated-link">
+			<img src="/modules/users/img/buttons/lastfm.png">
+		</a>
+		<a href="/auth/soundcloud" data-ng-hide="isConnectedIntegrationAccount('spotify')" class="undecorated-link">
+			<img src="/modules/users/img/buttons/spotify.png">
+		</a>
+	-->
+	</div>
+</section>

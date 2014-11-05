@@ -6,8 +6,8 @@ angular.module('users').config(['$stateProvider',
 		// Users state routing
 		$stateProvider.
 		state('integrations', {
-			url: '/integrations',
-			templateUrl: 'modules/users/views/integrations.client.view.html'
+			url: '/settings/integrations',
+			templateUrl: 'modules/users/views/settings/integrations.client.view.html'
 		}).
 		state('profile', {
 			url: '/settings/profile',
